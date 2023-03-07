@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+}
+
+#navbar{
+    display: flex;
+    background: black;  
+    margin-bottom: 10px;
+}
+
+#navbar > div{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 50%;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+#navbar > div > a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+#navbar > div > input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+} 
+
+#navbar > div > a > span{
+    margin-top: auto;
+    color: white;
+}
+#navbar > div > a >img{
+    width: 25%;
+}
+
+#Slider > img{
+    width: 100%;
+    margin: auto;
+    height: 95%;
+}
+#basic > img{
+    width: 20%;
+    margin: auto;
+    margin-left: 570px;
+}
+#loader > img{
+    width: 90%;
+    margin: auto;
+}
+
+#btn{
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#buttons{
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#buttons > button{
+    margin: auto;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+
+
+#wrapper{
+    width: 80%;
+    margin: auto;
+    padding: 100px;
+    display: flex;
+}
+
+#wrapper > div{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+
+#wrapper > div > img{
+    width: 82%;
+    border: 1px solid white;
+    padding: 40px;
+    margin: auto;
+    justify-content: center;
+    margin-left: 10px;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+}
+
+#wrapper > div > input{
+    width: 90%;
+    color: white;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: black;
+    /* width: 60%;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-content: center; */
+    
+}
+
+#wrapper > div > h1, p{
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+#wrapper > div > div > button{
+    padding: 15px;
+    width: 35%;
+    margin-top: 30px;
+    margin-left: 50px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+}
+#wrapper > div > button{
+    padding: 15px;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 50px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+}

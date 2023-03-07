@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDB</title>
+</head>
+<body>
+
+    <h1>Enter the movie details</h1>
+
+    <form id="movie_form">
+        <input type="url" placeholder="Poster" id="poster">
+        <input type="text" placeholder="Movie Name" id="name">
+        <input type="text" placeholder="IMDB Rating" id="rating">
+        <input type="submit" onclick="moviedb(event)"> 
+    </form>
+
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+function getInputValue(id){
+    let v = document.getElementById(id).value;
+
+    return v;
+}
+
+function Movie( p, n, r){
+    this.poster = p;
+    this.name = n;
+    this.rating = r;
+
+}
+
+
+const movies = [
+    {
+        "name": "Criminal Justice",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3065/1323065-v-58c6d2de61e1",
+        "rating" : "8.61",
+    },
+    {
+        "name": "Cuttputli",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6531/1326531-v-e6302c49fcd9",
+        "rating" : "5.9",
+    },
+    {
+        "name": "Thor : Love and Thunder(Hindi)",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8317/1328317-v-56412010beba",
+        "rating" : "6.6",
+    },
+    {
+        "name": "Sketch",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9264/1319264-v-0bd71e83df13",
+        "rating" : "5.6",
+    },
+    {
+        "name": "Games of Thrones",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/100/1320100-v-2498e2b9dd35",
+        "rating" : "9.2",
+    },
+    {
+        "name": "Bhaggi",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6536/846536-v",
+        "rating" : "2.1",
+    },
+    {
+        "name": "M.S Dhoni - The untold story",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/3314/1770003314/1770003314-v",
+        "rating" : "7.9",
+    },
+    {
+        "name": "Bhool Bhulaiya",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8105/1118105-v-cf275eb3c3f2",
+        "rating" : "7.4",
+    },
+    {
+        "name": "Gaddalakonda Ganesh",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1301/581301-v",
+        "rating" : "6.0",
+    },
+    {
+        "name": "Venom",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2347/1282347-v-57b71e72275e",
+        "rating" : "6.6",
+    },
+    {
+        "name": "Growing up",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7731/1327731-v-dd8222080752",
+        "rating" : "5.6",
+    },
+    {
+        "name": "Frozen II",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5199/875199-v",
+        "rating" : "6.8",
+    },
+    {
+        "name": "Criminal Justice",
+        "poster" : "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9639/1299639-v-6b6ec2d116a0",
+        "rating" : "7.4",
+    },
+];
+
+function moviedb(e){
+
+    let moviedb = JSON.parse(localStorage.getItem("movies")) || [];
+
+    let form = document.getElementById('movie_form');
+
+    const poster = getInputValue('poster');
+
+    const name = getInputValue('name');
+
+    const rating = getInputValue('rating');
+
+    let movie = new Movie(poster, name, rating);
+
+    moviedb.push(movie)
+    
+    let container = getInputValue('#container');
+    container.innerHTML = db
+    
+
+    let db = localStorage.setItem('movies', JSON.stringify(moviedb));
+
+    console.log(db)
+
+    
+}
+
+</script>
